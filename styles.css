@@ -9,8 +9,8 @@ body {
 }
 
 :root {
- --main-card-color: #4439CC;
- --main-card-episode-color: #3B31BA;
+  --main-card-color: #4439cc;
+  --main-card-episode-color: #3b31ba;
 }
 
 .navbar {
@@ -60,12 +60,17 @@ body {
   text-decoration: underline;
 }
 
+.cards-container {
+  max-width: 80%;
+  margin: auto;
+}
+
 .cards {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
   justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin: 20px 0;
+  gap: 0 20px;
+  margin: 10px 40px;
 }
 
 .card {
@@ -73,7 +78,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 20px 0;
+  max-height: 1005px;
+  margin: 10px 0;
   padding-bottom: 10px;
   border-radius: 12px;
   background-color: var(--main-card-color);
@@ -98,23 +104,36 @@ body {
   margin-top: 5px;
 }
 
-.card-arc-wall {
-  width: 380px;
-  object-fit: cover;
+.card-img {
   margin: 0 20px;
+}
+
+.card-arc-wall {
+  width: 100%;
+  height: 457px;
+  object-fit: cover;
   border-radius: 12px;
 }
 
 .card-episodes {
   font-family: "Helvetica";
   margin-top: 10px;
+  width: 100%;
+  height: 450px;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+.card-episodes::-webkit-scrollbar {
+  scrollbar-width: none;
+  display: none;
 }
 
 .card-episode {
   border-radius: 8px;
   background-color: var(--main-card-episode-color);
-  padding: 10px 30px;
-  margin-bottom: 10px;
+  padding: 7px 30px;
+  margin: 10px 20px;
 }
 
 .card-episode-title {
@@ -126,4 +145,13 @@ body {
 .card-episode > p {
   margin: 3px 0;
   color: #dddddd;
+}
+
+@media (max-width: 800px) {
+  .navbar {
+    padding: 20px 0;
+  }
+  .nav-items {
+    flex-direction: column;
+  }
 }
