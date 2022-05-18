@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #272536;
+}
+
+:root {
+ --main-card-color: #4439CC;
+ --main-card-episode-color: #3B31BA;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Helvetica";
+  font-size: 24px;
+  color: white;
+  list-style: none;
+}
+
+.nav-item {
+  display: inline-block;
+  margin: 0 30px;
+  cursor: pointer;
+}
+
+.nav-item:hover {
+  color: grey;
+}
+
+.logo {
+  width: 180px;
+}
+
+.warning {
+  text-align: center;
+}
+
+.warning-text {
+  font-family: "Helvetica";
+  font-size: 18px;
+  color: white;
+  padding: 8px 0;
+  background-color: #5f27cd;
+  cursor: pointer;
+}
+
+.warning-text:hover {
+  text-decoration: underline;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  padding-bottom: 10px;
+  border-radius: 12px;
+  background-color: var(--main-card-color);
+}
+
+.card-info {
+  font-family: "Helvetica";
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.card-info > h3 {
+  font-size: 26px;
+  color: white;
+  margin-bottom: 5px;
+}
+
+.card-info > p {
+  font-size: 20px;
+  color: #dddddd;
+  margin-top: 5px;
+}
+
+.card-arc-wall {
+  width: 380px;
+  object-fit: cover;
+  margin: 0 20px;
+  border-radius: 12px;
+}
+
+.card-episodes {
+  font-family: "Helvetica";
+  margin-top: 10px;
+}
+
+.card-episode {
+  border-radius: 8px;
+  background-color: var(--main-card-episode-color);
+  padding: 10px 30px;
+  margin-bottom: 10px;
+}
+
+.card-episode-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+}
+
+.card-episode > p {
+  margin: 3px 0;
+  color: #dddddd;
+}
