@@ -13,13 +13,15 @@ body {
   --main-card-episode-color: #3b31ba;
 }
 
+/* * Navbar */
+
 .navbar {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.nav-items {
+.navbar__list {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -29,25 +31,27 @@ body {
   list-style: none;
 }
 
-.nav-item {
+.navbar__item {
   display: inline-block;
   margin: 0 30px;
   cursor: pointer;
 }
 
-.nav-item:hover {
+.navbar__item:hover {
   color: grey;
 }
 
-.logo {
+.navbar__item__logo {
   width: 180px;
 }
 
-.warning {
+/* * Banner */
+
+.banner {
   text-align: center;
 }
 
-.warning-text {
+.banner__title {
   font-family: "Helvetica";
   font-size: 18px;
   color: white;
@@ -56,11 +60,13 @@ body {
   cursor: pointer;
 }
 
-.warning-text:hover {
+.banner__title:hover {
   text-decoration: underline;
 }
 
-.cards-container {
+/* * Cards */
+
+.cards__container {
   max-width: 80%;
   margin: auto;
 }
@@ -85,37 +91,37 @@ body {
   background-color: var(--main-card-color);
 }
 
-.card-info {
+.card__content {
   font-family: "Helvetica";
   text-align: center;
   margin-top: 20px;
   margin-bottom: 10px;
 }
 
-.card-info > h3 {
+.card__content > h3 {
   font-size: 26px;
   color: white;
   margin-bottom: 5px;
 }
 
-.card-info > p {
+.card__content > p {
   font-size: 20px;
   color: #dddddd;
   margin-top: 5px;
 }
 
-.card-img {
+.card__img__container {
   margin: 0 20px;
 }
 
-.card-arc-wall {
+.card__img {
   width: 100%;
   height: 457px;
   object-fit: cover;
   border-radius: 12px;
 }
 
-.card-episodes {
+.card__episodes {
   font-family: "Helvetica";
   margin-top: 10px;
   width: 100%;
@@ -124,34 +130,49 @@ body {
   scroll-behavior: smooth;
 }
 
-.card-episodes::-webkit-scrollbar {
+.card__episodes::-webkit-scrollbar {
   scrollbar-width: none;
   display: none;
 }
 
-.card-episode {
+.card__episode {
   border-radius: 8px;
   background-color: var(--main-card-episode-color);
   padding: 7px 30px;
   margin: 10px 20px;
 }
 
-.card-episode-title {
+.card__episode__title {
   font-size: 20px;
   font-weight: 600;
   color: white;
 }
 
-.card-episode > p {
+.card__episode > p {
   margin: 3px 0;
   color: #dddddd;
 }
+
+/* * Media Queries */
 
 @media (max-width: 800px) {
   .navbar {
     padding: 20px 0;
   }
-  .nav-items {
+  .navbar__list {
     flex-direction: column;
+  }
+}
+
+@media only screen and (max-device-width: 850px) {
+  .cards__container {
+    max-width: 100%;
+  }
+}
+
+@media only screen and (max-device-width: 500px) {
+  .cards {
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    margin: 10px 0;
   }
 }
