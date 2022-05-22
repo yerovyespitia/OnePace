@@ -10,6 +10,7 @@ body {
 
 :root {
   --main-card-color: #4439cc;
+  --hover-card-color: #4e42ef;
   --main-card-episode-color: #3b31ba;
 }
 
@@ -38,11 +39,16 @@ body {
 }
 
 .navbar__item:hover {
-  color: grey;
+  color: rgb(189, 189, 189);
 }
 
 .navbar__item__logo {
   width: 180px;
+  transition: transform 200ms ease-out;
+}
+
+.navbar__item__logo:hover {
+  transform: scale(1.03);
 }
 
 /* * Banner */
@@ -89,6 +95,12 @@ body {
   padding-bottom: 10px;
   border-radius: 12px;
   background-color: var(--main-card-color);
+  transition: transform 200ms;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  background-color: var(--hover-card-color);
 }
 
 .card__content {
